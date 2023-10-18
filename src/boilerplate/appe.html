@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="appe.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main id="app.layout">
+        <section id="left-col">
+            <header>
+
+                <div class="left">
+                    <div class="title">
+                        Details
+                        <div class="right">
+                            <button class="add.btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <ul id="details-list">
+            </ul>
+        </section>
+
+        <section id="right-col">
+            <header>
+                <div>
+                    <button class="back.btn">Back</button>
+                </div>
+                <div class="title">
+                    Name
+            </header>
+            <div id="right-col-details">
+
+            </div>
+        </section>
+    </main>
+
+    <!-- SECTION MODAL -->
+
+    <div class="modal-overlay">
+        <div id="modal">
+            <div class="modal-header">
+                <h2>Add details</h2>
+            </div>
+            <ul id="error-label"></ul>
+            <div class="modal-content">
+                <div class="row">
+                    <div class="input-group">
+                        <label for="name">First Name</label>
+                        <input type="text" id="first-name" placeholder="Enter First name">
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Last Name</label>
+                        <input type="text" id="last-name" placeholder="Enter Last name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label for="name">Age</label>
+                        <input type="number" id="age" placeholder="Enter age">
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Phone</label>
+                        <input type="number" id="phone" placeholder="Enter Phone Number">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter Email">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="appe.js"></script>
+</body>
+
+</html>
