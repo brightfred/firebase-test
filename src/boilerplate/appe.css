@@ -1,185 +1,355 @@
 body {
+
     margin: 0;
+
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
-    /* Added a subtle background color */
+
 }
 
-#app.layout {
+
+
+#app-layout {
+
     display: flex;
-    height: 100vh;
+
 }
 
-#app.layout #left-col {
+
+
+#app-layout #left-col {
+
     flex: 1;
-    background-color: #f9f9f9;
-    /* Light background for the sidebar */
+
 }
 
-#app.layout #right-col {
+
+
+#app-layout #right-col {
+
     flex: 3;
+
 }
+
+
+
+/* Header*/
 
 header {
-    background: linear-gradient(135deg, #003366, #005399);
-    /* Gradient background */
-    color: #fff;
+
+    background-color: #2e3e49;
+
+    color: white;
+
     height: 65px;
+
     display: flex;
-    padding: 15px;
-    align-items: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
+
 }
 
-header .left,
-header .right {
+
+
+header .left {
+
     flex: 1;
-    display: flex;
-    align-items: center;
+
 }
+
+
 
 header .title {
-    flex: 2;
-    text-align: center;
+
+    flex: 3;
+
     font-size: 20px;
-    font-weight: 600;
-    /* Bolder font */
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
 }
+
+
+
+header .right {
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: right;
+
+}
+
+
+
+/*Global Style */
 
 button {
+
     margin: 5px;
-    padding: 5px 12px;
-    background-color: #007acc;
+
+    padding: 5px 8px;
+
+    background: #32bacf;
+
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #fff;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
-    transition: all 0.3s ease-in-out;
-    /* Added transition for all styles */
+
+    color: white;
+
+    font-size: 10px;
+
 }
+
+
 
 button:hover {
-    background-color: #005699;
-    transform: scale(1.05);
-    /* Less aggressive scale for professionalism */
+
+    background-color: sandybrown;
+
+    cursor: pointer;
+
 }
 
-.modal-overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent overlay */
+
+
+/* Modal Window */
+
+#modal-overlay {
+
+    background-color: gray;
+
     width: 100%;
+
     height: 100%;
-    position: fixed;
-    /* Changed from absolute to fixed for better positioning */
+
+    position: absolute;
+
     top: 0;
+
     left: 0;
+
     display: none;
+
     align-items: center;
+
     justify-content: center;
-    z-index: 1000;
-    /* To make sure modal is always on top */
+
 }
 
-#modal {
+
+
+#modal-overlay #modal {
+
     max-width: 500px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    width: 90%;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    /* Subtle shadow for depth */
+
+    width: 100%;
+
+    background-color: white;
+
 }
+
+
+
+/*Add Details Form */
 
 #modal .modal-header h2 {
+
     text-align: center;
+
     margin: 0;
+
     padding: 10px;
-    color: #333;
-    /* Darker color for better contrast */
+
 }
+
+
+
+#modal .modal-content .row {
+
+    display: flex;
+
+}
+
+
+
+#modal .modal-content .row .input-group {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin: 5px 15px;
+
+}
+
+
 
 input[type="text"],
-input[type="email"],
-input[type="number"] {
+
+input[type="number"],
+
+input[type="email"] {
+
     font-size: 20px;
+
     height: 28px;
+
     padding-left: 10px;
-    color: #333;
-    /* Darker color for better contrast */
-    border: 1px solid #ccc;
-    width: 100%;
-    border-radius: 5px;
-    margin: 5px 0;
+
+    padding-right: 12px;
+
+    color: #666;
+
+    border: 1px solid #d6d6d6;
+
 }
 
+
+
 #modal .modal-footer {
+
     display: flex;
+
     justify-content: flex-end;
+
     margin: 5px 10px;
 
 }
 
+
+
 /* Contact List */
 
 #contact-list {
-    padding: 0px;
-    margin: 0px;
-    border: 1px solid #ccc;
+
+    padding: 0;
+
+    margin: 0;
+
+    border: 1px solid grey;
+
     border-bottom: 0;
+
 }
 
+
+
 .contact-list-item {
-    list-style: none;
-    padding: 5px;
-    border-bottom: 1px solid #ccc;
+
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+    border-bottom: 1px solid #999;
+
+    padding: 5px;
+
 }
+
 
 
 .contact-list-item .media {
+
     flex: 1;
+
 }
+
+
 
 .contact-list-item .content {
-    display: flex;
-    flex-direction: column;
-    padding-left: 10px;
-    justify-content: center;
+
     flex: 3;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding-left: 10px;
+
 }
+
+
 
 .contact-list-item .content .title {
+
     font-size: 12px;
-    font-weight: 600;
-    /* Bolder font */
+
+    font-weight: bold;
+
     color: #333;
+
 }
 
-#right-col-details {
+
+
+/*Right Column */
+
+#right-col-detail {
+
     margin: 20px;
+
 }
 
-#right-col-details .label {
+
+
+#right-col-detail .label {
+
+    font-size: 11px;
+
     margin-top: 10px;
-    font-size: 20px;
-    font-weight: 600;
-    /* Bolder font */
-    color: #333;
+
+    font-weight: bold;
+
 }
 
-#right-col-details .data {
-    margin-top: 5px;
-    font-size: 16px;
-    color: #333;
-    /* Darker color for better contrast */
+
+
+#right-col-detail .data {
+
+    font-size: 11px;
+
 }
 
-#app-layout #right-col-details #back-btn {
+
+
+#app-layout #right-col #back-btn {
+
     display: none;
+
 }
 
+
+
+@media only screen and (max-width: 600px) {
+
+    #app-layout #right-col {
+
+        display: none;
+
+    }
+
+
+
+    #app-layout #right-col #back-btn {
+
+        margin: 20px 0 0 20px;
+
+        display: block;
+
+    }
+
+
+
+    #modal .modal-content .row {
+
+        flex-direction: column;
+
+    }
+
+}

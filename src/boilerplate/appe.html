@@ -1,85 +1,161 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="appe.css">
+
+    <link rel="stylesheet" href="appe.css" />
+
     <title>Document</title>
+
 </head>
 
 <body>
-    <main id="app.layout">
+
+    <main id="app-layout">
+
         <section id="left-col">
+
             <header>
 
                 <div class="left">
-                    <div class="title">
-                        Details
-                        <div class="right">
-                            <button class="add.btn">Add</button>
-                        </div>
-                    </div>
+
                 </div>
+
+                <div class="title">
+
+                    Details
+
+                </div>
+
+                <div class="right">
+
+                    <button class="add-btn">Add</button>
+
+                </div>
+
             </header>
+
             <ul id="details-list">
+
             </ul>
+
         </section>
 
         <section id="right-col">
-            <header>
-                <div>
-                    <button class="back.btn">Back</button>
-                </div>
-                <div class="title">
-                    Name
-            </header>
-            <div id="right-col-details">
 
-            </div>
+            <header>
+
+                <div>
+
+                    <button id="back-btn">Back</button>
+
+                </div>
+
+                <div class="title">
+
+                    Name
+
+                </div>
+
+            </header>
+
+            <div id="right-col-detail"></div>
+
         </section>
+
     </main>
 
-    <!-- SECTION MODAL -->
+    <!--MODAL-->
 
-    <div class="modal-overlay">
+    <div id="modal-overlay">
+
         <div id="modal">
+
             <div class="modal-header">
-                <h2>Add details</h2>
+
+                <h2>Add Details</h2>
+
             </div>
+
             <ul id="error-label"></ul>
+
             <div class="modal-content">
+
                 <div class="row">
+
                     <div class="input-group">
-                        <label for="name">First Name</label>
-                        <input type="text" id="first-name" placeholder="Enter First name">
+
+                        <label>First Name</label>
+
+                        <input type="text" id="firstname">
+
                     </div>
+
                     <div class="input-group">
-                        <label for="name">Last Name</label>
-                        <input type="text" id="last-name" placeholder="Enter Last name">
+
+                        <label>Last Name</label>
+
+                        <input type="text" id="lastname">
+
                     </div>
+
                 </div>
+
                 <div class="row">
+
                     <div class="input-group">
-                        <label for="name">Age</label>
-                        <input type="number" id="age" placeholder="Enter age">
+
+                        <label>Age</label>
+
+                        <input type="number" id="age">
+
                     </div>
+
                     <div class="input-group">
-                        <label for="name">Phone</label>
-                        <input type="number" id="phone" placeholder="Enter Phone Number">
+
+                        <label>Phone</label>
+
+                        <input type="number" id="phone">
+
                     </div>
+
                 </div>
+
                 <div class="row">
+
                     <div class="input-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Enter Email">
+
+                        <label for="">Email</label>
+
+                        <input type="email" id="email">
+
                     </div>
+
                 </div>
+
             </div>
+
+            <div class="modal-footer">
+
+                <button class="close-btn">Close</button>
+
+                <button class="save-btn">Save</button>
+
+            </div>
+
         </div>
 
+    </div>
 
-        <script src="appe.js"></script>
+    <script type="module" src="firebase-sdk.js"></script>
+
+    <script src="appe.js"></script>
+
 </body>
 
 </html>
