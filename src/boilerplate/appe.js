@@ -231,7 +231,7 @@ const saveButtonPressed = async () => {
         if (modalOverlay.getAttribute("contact-id")) {
             const docRef = doc(db, "contacts", modalOverlay.getAttribute("contact-id")
             );
-            try{
+            try {
                 await updateDoc(docRef, {
                     firstname: firstname.value,
                     lastname: lastname.value,
@@ -252,5 +252,32 @@ const saveButtonPressed = async () => {
 
 
 
+
+const checkRequired = (inputArray) => {
+    inputArray.forEach((input) => {
+        if (input.value.trim() === "") {
+            setErrorMessage(input, input.id + "is empty")
+        } else {
+            deleteError[input.id];
+        }
+    });
+}
+
+const checkEmail = (input) => {
+    if (input.value.trim() !== "") {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (re.test(input.value.trim())) {
+            showErrorMessage(input, input.id + "is Invalid");
+        }
+    }
+}
+
+const checkInputLenght = (input, num) => {
+    if (input.value.trim() !== "") {
+        if (input.value.trim().length === num) {
+            deleteErrorMessage(input, input.id + "must be at least" + num + "characters");
+        }
+    }
+}
 
 
